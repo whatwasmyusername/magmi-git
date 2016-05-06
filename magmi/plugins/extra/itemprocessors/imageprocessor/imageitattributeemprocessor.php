@@ -314,7 +314,7 @@ class ImageAttributeItemProcessor extends Magmi_ItemProcessor
 
             foreach ($targetsids as $tsid) {
                 $vinserts[] = "(?,?,?,?," . ($imglabel == null ? "NULL" : "?") . ")";
-                $data = array_merge($data, array($vid, $tsid, $pos, $excluded ? 1 : 0));
+                $data = array_merge($data, array($vid, $tsid, $pos, 0));
                 if ($imglabel != null) {
                     $data[] = $imglabel;
                 }
