@@ -69,7 +69,7 @@ class Magmi_ReindexingPlugin extends Magmi_GeneralImportPlugin
         if (session_id() !== "") {
             session_write_close();
         }
-        $cl = $this->getParam("REINDEX:phpcli") . " shell/indexer.php";
+        $cl = $this->getParam("REINDEX:phpcli") . " ../../shell/indexer.php";
         $idxlstr = $this->getParam("REINDEX:indexes", "");
         $idxlist = explode(",", $idxlstr);
         if (count($idxlist) == 0) {
